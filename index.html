@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Budget Application</title>
+    <link rel="budget-css" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Home Budget Application</h1>
+</header>
+<main>
+    <section>
+        <h2>All Income</h2>
+        <form id="income-form">
+            <input type="text" id="income-description" placeholder="Name" required>
+            <input type="number" id="income-amount" placeholder="Amount" required>
+            <button type="submit">Add Income</button>
+        </form>
+        <ul id="income-list"></ul>
+    </section>
+    <section>
+        <h2>Expenses</h2>
+        <form id="expense-form">
+            <input type="text" id="expense-description" placeholder="Description" required>
+            <select name="IncomeType" id="income_type" required>
+                <optgroup label="Income Type">
+                    <option value="credit_card">Credit Card</option>
+                    <option value="loans">Loans</option>
+                    <option value="utility">Utility</option>
+                    <option value="service">Service</option>
+                    <option value="grocery">Grocery</option>
+                    <option value="membership">Membership</option>
+                    <option value="auto_care">Auto Care</option>
+                    <option value="pay_debt">Pay Debt</option>
+                    <option value="insurance">Insurance</option>
+                    <option value="home_care">Home Care</option>
+                </optgroup>
+            </select>
+            <input type="number" id="expense-amount" placeholder="Amount" required>
+            <button type="submit">Add Expense</button>
+        </form>
+        <ul id="expense-list"></ul>
+    </section>
+    <section>
+        <h2>Summary</h2>
+        <p>Total Income: $<span id="total-income">0</span></p>
+        <p>Total Expenses: $<span id="total-expenses">0</span></p>
+        <p>Balance: $<span id="balance">0</span></p>
+    </section>
+</main>
+<script src="budget_script.js"></script>
+</body>
+</html>
+
